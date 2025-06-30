@@ -73,8 +73,8 @@ After=network.target
 
 [Service]
 User=paiva
-WorkingDirectory=/home/paiva/sandbox/cepapi
-ExecStart=/home/paiva/sandbox/cepapi/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+WorkingDirectory=/________________/cepapi
+ExecStart=/________________/cepapi/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
 Restart=always
 RestartSec=3
 
