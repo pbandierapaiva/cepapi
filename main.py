@@ -32,7 +32,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost","https://redcap.unifesp.br"],  # Explicitly allow your domain
+    allow_origins=["http://localhost:8000","https://redcap.unifesp.br"],  # Explicitly allow your domain
     allow_methods=["GET", "POST"],
     allow_credentials=True,
 )
