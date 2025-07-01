@@ -4,6 +4,13 @@ from contextlib import asynccontextmanager
 import uvicorn
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://redcap.unifesp.br"],  # Explicitly allow your domain
+    allow_methods=["GET", "POST"],
+    allow_credentials=True,
+)
+
 
 # Load data into a dictionary on startup for speed
 cep_dict = {}
