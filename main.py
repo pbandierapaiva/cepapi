@@ -53,7 +53,7 @@ def get_address(cep: str):
     if cep in cep_dict:
         return JSONResponse(content=cep_dict[cep])
     else:
-        raise HTTPException(status_code=404, detail="CEP not found")
+        raise HTTPException(status_code=404, detail="CEP não enconttrado")
 
 
 ## Uncomment if running directly
