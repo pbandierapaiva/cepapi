@@ -5,7 +5,7 @@ from fastapi.responses import JSONResponse
 from contextlib import asynccontextmanager
 import uvicorn
 
-app = FastAPI()
+app = FastAPI(lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://redcap.unifesp.br"],  # Explicitly allow your domain
@@ -36,7 +36,6 @@ async def lifespan(app: FastAPI):
     yield  # continue running app
     # no cleanup necessary on shutdown
 
-app = FastAPI(lifespan=lifespan)
 
 @app.get("/{cep}")
 def get_address(cep: str):
