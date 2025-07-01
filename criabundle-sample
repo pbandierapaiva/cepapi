@@ -1,0 +1,2 @@
+cat //your.crt //intermediate.pem > /path/to/your/fastapi/app/uvicorn_cert_bundle.pem
+

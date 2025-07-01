@@ -26,7 +26,6 @@ async def lifespan(app: FastAPI):
                     "logradouro": logradouro
                 }
     yield  # continue running app
-    # no cleanup necessary on shutdown
 
 
 app = FastAPI(lifespan=lifespan)
@@ -34,6 +33,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://redcap.unifesp.br",
+        "https://redcap.unifesp.br:8000",
         "http://localhost",
         "http://localhost:8000",
         "http://127.0.0.1",
