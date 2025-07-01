@@ -1,4 +1,6 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
 from fastapi.responses import JSONResponse
 from contextlib import asynccontextmanager
 import uvicorn
