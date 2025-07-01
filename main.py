@@ -32,9 +32,17 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8000","https://redcap.unifesp.br"],  # Explicitly allow your domain
-    allow_methods=["GET", "POST"],
+    allow_origins=[
+        "https://redcap.unifesp.br",
+        "http://localhost",
+        "http://localhost:8000",
+        "http://127.0.0.1",
+        "http://127.0.0.1:8000"
+    ],
     allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    expose_headers=["*"]
 )
 
 @app.get("/{cep}")
