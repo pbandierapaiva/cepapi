@@ -1,0 +1,12 @@
+{
+  "name": "cep_autofill",
+  "description": "Auto-preenchimento de campos de endereço a partir de servidor de ontologia de CEP",
+  "namespace": "Unifesp\\cep_autofill",
+  "version": "1.0",
+  "authors": [{
+	  "name": "Paulo Bandiera-Paiva", 
+	  "email": "paiva@unfiesp.br",
+	  "institution":"Universidade Federal de São Paulo"
+  }],
+  "framework-version": 12
+}
